@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import Child from './child'
+import CustomRef from './refDom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      val: '初始值'
+    }
+
 }
 
-export default App;
+ changeVal = () => {
+   this.setState({
+     val: '修改后你爸爸的值'
+   })
+ }
+ render () {
+   const { val } = this.state
+  return (
+    <div>
+      <div>测试--{val}</div>
+      <Child changeVal={this.changeVal}></Child>
+      <CustomRef/>
+    </div>
+  )
+ }
+
+}
+
+export default App
