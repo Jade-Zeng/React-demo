@@ -2,6 +2,7 @@ import React from 'react';
 // import './App.css';
 import Child from './child'
 import CustomRef from './refDom'
+import Datepicker from './Antddemo.jsx'
 
 class App extends React.Component {
   constructor (props) {
@@ -24,6 +25,7 @@ class App extends React.Component {
       <div>测试--{val}</div>
       <Child changeVal={this.changeVal}></Child>
       <CustomRef/>
+      <Datepicker/>
     </div>
   )
  }
