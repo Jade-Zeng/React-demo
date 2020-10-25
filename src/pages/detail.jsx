@@ -3,7 +3,7 @@ import React from 'react'
 const Detail = (props) => {
     const toHome = () => {
         console.log(props)
-        props.history.push('/home')
+        // props.history.push('/home')
     }
     return (
         <div>Detail页面展示8888
